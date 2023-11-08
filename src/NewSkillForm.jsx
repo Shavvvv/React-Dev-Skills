@@ -1,7 +1,8 @@
-import SelectOptions from "../SelectOptions"
+import SelectOptions from "./SelectOptions"
+import "./NewSkillForm.css"
 export default function NewSkillForm(){
 return(
-<>
+<div className="NewSkillForm" > 
     <label htmlFor="">Skill</label>
     <input type="text" />
     <label htmlFor="">Level</label>
@@ -9,7 +10,7 @@ return(
         <SelectOptions/>
     </select>
     <button>Submit</button>
-</>
+</div>
 )
 
 }
