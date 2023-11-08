@@ -5,15 +5,21 @@ import SkillList from './SkillList'
 import Form from './form'
 import './App.css'
 
-const skills = [
+/*const skills = [
   { name: "HTML", level: 5 },
   { name: "CSS", level: 3 },
   { name: "JavaScript", level: 4 },
   { name: "Python", level: 2 },
 ];
-
+*/
 function App() {
-
+  const [skills, setSkills] = useState([
+    { name: "HTML", level: 5 },
+    { name: "CSS", level: 3 },
+    { name: "JavaScript", level: 4 },
+    { name: "Python", level: 2 },
+  ]);
+  const[showSkills,setShowSkills]= useState(true)
   
   return (
    <div className='App'>
