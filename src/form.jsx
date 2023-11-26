@@ -1,10 +1,30 @@
+import { useState } from "react";
 import NewSkillForm from "./NewSkillForm"
 
-export default function Form(){
+export default function Form( {addSkill} ) {
+    const [newSkill, setNewSkill] = useState({
+        name: '',
+        level:''
+    })
+
+ 
+
+    function handleAddSkill(evt) {
+        evt.preventDefault();
+         addSkill(newSkill)
+        setNewSkill({
+            name: '',
+            level:''
+        })
+       
+    }
+
+
+
 
 return(
-    <form action="Submit">
-        <NewSkillForm/>
+    <form onSubmit={handleAddSkill}>
+        <NewSkillForm setNewSkill={setNewSkill } />
     </form>
 )
 

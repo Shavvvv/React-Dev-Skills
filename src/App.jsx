@@ -19,14 +19,17 @@ function App() {
     { name: "JavaScript", level: 4 },
     { name: "Python", level: 2 },
   ]);
-  const[showSkills,setShowSkills]= useState(true)
-  
+
+  function addSkill(skill) {
+    setSkills([...skills, skill])
+  }
+
   return (
    <div className='App'>
    <h1> React Dev Skills</h1>
    <SkillList skills={skills}/>
    <hr />
-   <Form/>
+      <Form addSkill={ addSkill} />
    </div>
   )
 }
